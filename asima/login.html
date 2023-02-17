@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title id="title"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+  </style> 
+  <script>
+var x = "User-agent: " + navigator.userAgent;
+var y = x.split("; ");
+if(y.includes("; ") === true){
+  for(var i = 0; i < y.length; i++){
+    if(y[i].includes("Android") === true){
+      var z = y[i].split(" ");
+      if(z.includes(".") === true){
+        var z2 = z[1].split(".");
+        if(parseInt(z2[0]) >= 10){
+          alert("Pengguna "+y[i]+"Harus Mengubah Settingan MAC Acak/random di Pengaturan WiFi Menjadi MAC Perangkat/Device untuk tetap stabil terhubung dijaringan kami");
+        }
+      }else{
+        if(parseInt(z[1]) >= 10){
+          alert("Pengguna "+y[i]+"Harus Mengubah Settingan MAC Acak/random di Pengaturan WiFi Menjadi MAC Perangkat/Device untuk tetap stabil terhubung dijaringan kami");
+        }
+      }
+    }
+  }
+}
+</script>
+</head>
+</script>
+  <!-- <audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="music.mp3" type="audio/mpeg">
+</audio> -->
+
+<body>
+        $(if chap-id)
+        <form name="sendin" action="$(link-login-only)" method="post">
+            <input type="hidden" name="username" />
+            <input type="hidden" name="password" />
+            <input type="hidden" name="dst" value="$(link-orig)" />
+            <input type="hidden" name="popup" value="true" />
+        </form>
+
+        <script type="text/javascript" src="md5.js"></script>
+        <script type="text/javascript">
+            function doLogin() {
+                document.sendin.username.value = document.login.username.value;
+                document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
+                    '$(chap-challenge)');
+                document.sendin.submit();
+                return false;
+            }
+        </script>
+        $(endif)
+           
+			
+            <br>
+            <br>
+            <div id="main" class="main">
+                <header >
+                    <img class="gbhead" src="img/wellcome.jpg" width="100">
+                </header>
+            <marquee direction="left" class="jalan">Selamat datang di hotspot Rinjani_WiFi@ASHIMA, nikmati layanan internet sepuasnya, Unlimited tanpa batasan kuota dengan harga terjangkau, pastikan privasi  HP anda ke MAC Perangkat agar bisa digunakan di semua jaringan kami.</marquee>
+            <div class="box">
+          <button id="btnvrc" class="small-button" onclick="voucher();"><i class="icon icon-ticket">&#xe802;</i> Voucher</button>
+                <button id="btnmem" class="small-button" onclick="member();"><i class="icon icon-user-circle-o">&#xf2be;</i> Member</button>
+                 
+            </div>
+            <div class="box" id="infologin">
+            </div>
+            <form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()"
+                $(endif)>
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="true" />
+                <input class="username" name="username" placeholder="INPUT VOUCHER" type="text" value="$(username)" />
+                <input class="password" name="password" placeholder="Password" type="hidden" />
+
+                <button class="button" type="submit"><i class="icon icon-login">&#xe803;</i>LOGIN</button>
+
+                
+            </form>
+
+            
+              
+
+            $(if trial == 'yes')
+            <div class="box">Coba gratis <a style="text-decoration: underline; color:#1829e3;" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">klik
+                    di sini</a></div>
+            $(endif)
+
+            $(if error)<div class="notice">$(error)</div>$(endif)
+            <div style="color:#000;">
+
+              <footer class="footer-distributed">
+ 
+                <p><strong>Rinjani_WiFi@ASHIMA</strong> </p>
+                <div class="footer-icons">
+                  <h2>suppport by</h2>
+                  <img class="footer" src="img/header.png" width="100">
+                <!-- <a href="#"><i class= "fa fa-facebook" ></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a> -->
+                
+                </div>
+                
+                </div>
+                
+                </footer>
+
+              
+           
+								<!-- Tolong jangan dihilangkan bagian ini-->
+								
+<div class="btn-success" style="margin-top:3px;text-align:center;">
+    <!-- <i>Copyright &copy; 2020 <marquee> <i><a style="color:rgb(0, 0, 0); text-decoration:none;"> BUKAL.NET selalu  melayani demi kepuasan anda berselancar di internet </marquee> </a></i> </a></div></i><br /> -->
+        
+								<!-- Tolong jangan dihilangkan bagian ini-->
+        </div>
+		
+		
+            </div>
+        </div>
+        <br>
+        
+        
+        <div>
+            <ul>
+                <li><a class="active" href="login.html"><img src="img/house.png" width="30"></a></li>
+                <li><a href="paket.html"><img src="img/money.png" width="30" alt="Harga Paket"></a></li>
+                <li><a href="contact.html"><img src="img/contacts.png" width="30"></a></li>
+                <li><a href="faq.html"><img src="img/faq.png" width="30"></a></li>
+                <li><a href="about.html"><img src="img/call-center.png" width="30"></a></li>
+            </ul>
+        </div>
+
+<script type="text/javascript">
+var hostname = window.location.hostname;
+document.getElementById('title').innerHTML = hostname  + " > login";
+
+document.login.username.focus();
+
+var infologin = document.getElementById('infologin');
+infologin.innerHTML = "Masukkan Kode Voucher kemudian klik login.";
+
+// login page 2 mode by Laksamadi Guko
+var username = document.login.username;
+var password = document.login.password;
+
+username.placeholder = "Kode Voucher";
+
+// set password = username
+function setpass() {
+    var user = username.value
+    //user = user.toLowerCase();
+    username.value = user;
+    password.value = user;
+}
+
+username.onkeyup = setpass;
+
+// change to voucher mode
+function voucher() {
+    username.focus();
+    username.onkeyup = setpass;
+    username.placeholder = "Kode Voucher";
+    username.style = "border-radius:none;"
+    password.type = "hidden";
+    infologin.innerHTML = "Masukkan Kode Voucher kemudian klik login.";
+}
+
+// change to member mode
+function member() {
+    username.focus();
+    username.onkeyup = "";
+    username.placeholder = "Username";
+    username.style = "border-radius:3px 3px 0px 0px;"
+    password.type = "password";
+    infologin.innerHTML = "Masukkan Username dan Password kemudian klik login.";
+}
+</script>
+</body>
+
+</html>
